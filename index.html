@@ -7,6 +7,11 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
     <link rel="stylesheet" href="animate.css">
     <title>Document</title>
+	<script
+	  src="https://code.jquery.com/jquery-3.2.1.min.js"
+	  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+	  crossorigin="anonymous">
+  </script>
 </head>
 <body>
     <h1>Здравствуй Мир</h1>
@@ -41,17 +46,20 @@
         </div>
       </nav>
       <div class="container">
-        <div class="jumbotron animated bounceInRight" id="jumbo">
+        <div class="jumbotron" id="jumbo">
           <h1 class="display-4">HelloWorld</h1>
           <p class="lead">Этот пример мы делаем с Рустамом, для того чтобы создать две ветки, одна из которых будет делать контент, а другая будет вносить изменения в Навигационную Панель</p>
           <hr class="my-4">
           <p class="lead">Если хотите такой же сайт заказать у компании АкслайтДевелопмент тогда нажмите на кнопку</p>
-          <a href="#" class="btn btn-primary btn-lg" role="button">Заказать Сайт</a>
+          <a href="#" class="btn btn-primary btn-lg" role="button" onclick="animateble()">Заказать Сайт</a>
         </div>
       </div>
      
 </body>
 <script>
-  
+	function animateble(){
+		$('.jumbotron').addClass('animated bounce');
+	};
+ 
 </script>
 </html>
