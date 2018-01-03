@@ -36,7 +36,7 @@
 	<![endif]-->
 </head>
 
-<body>
+<body onload="Firebasedata()">
 
 	<!-- Header -->
 	<header>
@@ -110,21 +110,16 @@
 				<!-- Main -->
 				<main id="main" class="col-md-9">
 					<div class="table-responsive">
-						<table class="table">
+						<table class="table" id="demo">
 							<tr>
 								<th>Name</th>
 								<th>email</th>
 								<th>Subject</th>
 								<th>Message</th>
 							</tr>
-							<tr>
-								<td>Hello</td>
-								<td>Hello</td>
-								<td>Hello</td>
-								<td>Hello</td>
-							</tr>
+							
 						</table>
-						<button class="btn btn-primary">Get Data From FireBase</button>
+						<button class="btn btn-primary" id="getData">Get Data From FireBase</button>
 						<br>
 					</div>
 					
@@ -402,6 +397,8 @@
 	<script type="text/javascript" src="js/owl.carousel.min.js"></script>
 	<script type="text/javascript" src="js/jquery.magnific-popup.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+	<script type="text/javascript" src="js/getdatafromfirebase.js"></script>
 
 </body>
 
