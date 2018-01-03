@@ -50,8 +50,42 @@
 
           //Get Data
           function getData(e){
-						e.preventDefault();
-												
-             alert('yepp');
+          //	e.preventDefault();
+          tbl = document.querySelector('#tbl');
+          var th = tbl.insertRow(tbl.length);
+          th.insertCell(0).innerHTML = 'Name';
+          th.insertCell(1).innerHTML = 'Email';
+          th.insertCell(2).innerHTML = 'Subject';
+          th.insertCell(3).innerHTML = 'Message';
+						messageRef.on("child_added", function(snapshot, prevChildKey) {
+              var newMessage = snapshot.val();
+              var row = tbl.insertRow(tbl.length);
+              row.insertCell(0).innerHTML = newMessage.name;
+              row.insertCell(1).innerHTML = newMessage.email;
+              row.insertCell(2).innerHTML = newMessage.subject;
+              row.insertCell(3).innerHTML = newMessage.message;
+              //alert('asdfasdf'); 
+               /*  console.log("Name: " + newMessage.name);
+                console.log("Email: " + newMessage.email);
+                console.log("Subject: " + newMessage.subject);
+                console.log("Message: " + newMessage.message); */
+
+              /* tbl = document.querySelector('#tbl');
+              newMessage.items.forEach(function (element) {
+              var row = tbl.insertRow(tbl.length);
+              row.insertCell(0).innerHTML = element.name;
+              row.insertCell(1).innerHTML = element.email;
+              alert('asdfasdf'); 
+              })*/
+
+              },
+              function (errorObject) {
+                console.log("The read failed: " + errorObject.code);
+                
+              
+              //var newWin = window.open('/contactTable.html');
+
+              
+            });
           };
 
